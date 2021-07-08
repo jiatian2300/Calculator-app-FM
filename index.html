@@ -6,32 +6,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
 
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/css-toggle-switch/latest/toggle-switch.css" rel="stylesheet" />
   <link rel="stylesheet" href="style/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
+  <div class="container">
 
+    <header>
+      <h1>calc</h1>
+      <div class="theme-toggle">
+        <p>THEME</p>
+        <div class="col">
+          <div class="theme-nums">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+          </div>
+          <div class="switch-toggle switch-3 switch-ios">
+            <input id="theme_1" name="state-d" type="radio" checked="" />
+            <label for="theme_1" onclick=""></label>
+            <input id="theme_2" name="state-d" type="radio" checked="checked" />
+            <label for="theme_2" onclick=""></label>
+            <input id="theme_3" name="state-d" type="radio" />
+            <label for="theme_3" onclick=""></label>
+            <a></a>
+          </div>
+        </div>
+      </div>
+    </header>
 
+    <div class="calculator-grid">
+      <div data-operand class="output">
+        <!-- <div class="prev-output"></div>
+        <div class="curr-output"></div> -->
+      </div>
+
+      <div class="keypad">
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-del class="blue">DEL</button>
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button data-operation>+</button>
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button data-operation>-</button>
+        <button data-number>.</button>
+        <button data-number>0</button>
+        <button data-operation>/</button data-operation>
+        <button data-operation>x</button>
+        <button data-reset class="span-two blue">RESET</button>
+        <button data-equals class="span-two red">=</button>
+      </div>
+    </div>
+  </div>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script src="theme-toggle.js"></script>
 </body>
+<script src="calculator.js"></script>
 
 </html>
