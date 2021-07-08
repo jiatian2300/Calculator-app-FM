@@ -67,7 +67,7 @@ body {
 
 .container {
     width: 88%;
-    max-width: 430px;
+    max-width: 430px; //stop increasing the width of the container at 430px
     margin: 0 auto;
     height: 100vh;
     display: flex;
@@ -110,14 +110,14 @@ header {
             .switch-toggle {
                 float: left;
                 background: var(--toggle_bg);
-                height: 1.7em;
+                height: 1.7em; //adjust size of toggle
                 width: 4.95em;
             }
 
             .switch-toggle label:nth-child(2):nth-last-child(6),
             .switch-toggle label:nth-child(2):nth-last-child(6) ~ label,
             .switch-toggle label:nth-child(2):nth-last-child(6) ~ a {
-                height: 1.65em;
+                height: 1.65em; //adjust size and position of circle inside the toggle
                 width: 1.7em;
                 margin-top: 0.2em;
                 margin-left: 0.1em;
@@ -153,7 +153,10 @@ header {
         background: var(--toggle_bg);
 
         display: grid;
-        grid-template-columns: repeat(4, calc(min(16vw, 81px)));
+        grid-template-columns: repeat(
+            4,
+            calc(min(16vw, 81px))
+        ); //increase the size of column based on vw until 81px
         grid-template-rows: repeat(5, 16vw);
         justify-content: center;
         column-gap: 0.8em;
@@ -176,12 +179,12 @@ header {
             0 1px var(--ter_shadow);
 
         &:hover {
-            filter: brightness(105%);
+            filter: brightness(105%); //makes the button brighter
         }
 
         &:active {
-            transform: translateY(1px);
-            filter: brightness(95%);
+            transform: translateY(1px); //pushes button down
+            filter: brightness(95%); //makes the button darker
         }
     }
 
